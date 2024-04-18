@@ -1,0 +1,61 @@
+.studentDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    padding-bottom: 40px;
+    margin-top: -20px;
+    li {
+        margin-left: 20px;
+    }
+
+    input {
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    
+}
+.studentDetails__showMoreButton {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    span {
+        grid-column: 2 / 3;
+    }
+    color: lightseagreen;
+    text-decoration: underline;
+
+}
+.studentDetails__card {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    div {
+        padding-bottom: 20px;
+        font-size: 1.1em;
+    }
+    h3 {
+        margin-bottom: 20px;
+        font-size: 1.3em;
+    }
+    span {
+        color: lightseagreen;
+    }
+}
+
+.pokemonForm {
+    border: 1px solid black;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.studentDetails__form-button-container {
+    margin-left: -10px;
+}
+
+.studentDetails__form-button{
+    margin-top: 10px;
+    color: white;
+    background: lightseagreen;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}

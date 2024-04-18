@@ -1,0 +1,46 @@
+.studentInfo__card {
+  border: 2px solid lightseagreen;
+  margin-bottom: 20px;
+}
+
+.studentInfo__card-top {
+    font-family: sans-serif;
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 50% 30%;
+  
+    .studentInfo__card-info {
+      margin-top: 15px;
+    }
+    
+    .studentInfo__card-fullName,
+    .studentInfo__card-email,
+    .studentInfo__card-birthday{
+      grid-column: 2 / 3;
+      color: black;
+      margin: 12px 0px;
+      padding-left: 10px;
+    }
+    
+    img {
+      width: 90%;
+      grid-column: 1 / 2;
+      border-radius: 3px;
+    }
+
+    .birthday {
+      color: lightseagreen;
+    }
+
+    .studentInfo__card-ontrack-status {
+      text-align: center;
+      padding-bottom: 40px;
+      color: lightseagreen;
+    }
+  }
+
+  .studentInfo__card-fullName {
+    font-weight: 900;
+    font-size: 1.3em;
+  }

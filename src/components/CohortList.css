@@ -1,0 +1,22 @@
+.cohortList__card{
+    margin-right: 80px;
+    margin-left: -25px;
+    h2 {
+        text-align: center;
+    }
+    
+    li {
+        list-style: none;
+        padding-bottom: 10px;
+        border-bottom: 3px solid green;
+        input {
+            font-size: 1.3em;
+            font-weight: 900;
+            background: white;
+            color: black;
+            border: none;
+            margin-top: 20px;
+        }
+}
+
+}
