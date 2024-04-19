@@ -19,10 +19,17 @@ function App() {
     setStudentArray(e.target.value === "All Pokemon" ? [...dataState] : dataState.filter(ele => ele.cohort.cohortCode.includes(e.target.value)))
     setCohort(e.target.value)
   }
+
+  function handleRegionChange(e) {
+    setStudentArray(e.target.value === "All Pokemon" ? [...dataState] : dataState.filter(ele => ele.region === e.target.value))
+    setCohort(e.target.value)
+  }
   
   function findPokemon(e) {
     e.preventDefault()
     setStudentArray(e.target.value === "All Pokemon" ? [...dataState] : dataState.filter(ele => ele.names.preferredName.toLowerCase() === pokemon.toLowerCase()))
+    setCohort(pokemon[0].toUpperCase() + pokemon.slice(1))
+    setPokemon("")
   }
   
   let cohortList = []
@@ -34,6 +41,16 @@ function App() {
       }
     }
   }
+
+  let regionList = []
+
+  for (let student of data) {
+      if(!regionList.includes(student.region)) {
+        regionList.push(student.region)
+      }
+    }
+  
+  let regionSelection = ["All Pokemon"].concat(regionList)
   
   let cohortSelection = ["All Pokemon"].concat(cohortList)
 
@@ -41,7 +58,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-      <CohortList cohortSelection={cohortSelection} handleCohortChange={handleCohortChange}/>
+      <CohortList cohortSelection={cohortSelection} handleRegionChange={handleRegionChange} handleCohortChange={handleCohortChange} regionSelection={regionSelection}/>
       <StudentList cohort={cohort} pokemon={pokemon} setPokemon={setPokemon} findPokemon={findPokemon} studentArray={studentArray} setDataState={setDataState} dataState={dataState} />  
       </main>
     </div>
