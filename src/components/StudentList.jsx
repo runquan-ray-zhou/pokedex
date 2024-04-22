@@ -2,11 +2,7 @@ import { useState } from "react"
 
 import StudentInfo from "/src/components/StudentInfo.jsx"
 
-export default function StudentList({ pokemon, setPokemon, findPokemon, studentArray, cohort, setDataState, dataState}) {
-
-    function handleTextChange(e) {
-        setPokemon(e.target.value)
-    }
+export default function StudentList({ handleTextChange, pokemon, findPokemon, studentArray, cohort, setDataState, dataState}) {
 
     return (
         <div>

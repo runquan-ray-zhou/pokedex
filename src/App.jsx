@@ -31,6 +31,11 @@ function App() {
     setCohort(pokemon[0].toUpperCase() + pokemon.slice(1))
     setPokemon("")
   }
+
+  function handleTextChange(e) {
+    setStudentArray(e.target.value === "All Pokemon" ? [...dataState] : dataState.filter(ele => ele.names.preferredName.toLowerCase().includes(e.target.value)))
+    setPokemon(e.target.value)
+}
   
   let cohortList = []
 
@@ -59,7 +64,7 @@ function App() {
       <Header />
       <main>
       <CohortList cohortSelection={cohortSelection} handleRegionChange={handleRegionChange} handleCohortChange={handleCohortChange} regionSelection={regionSelection}/>
-      <StudentList cohort={cohort} pokemon={pokemon} setPokemon={setPokemon} findPokemon={findPokemon} studentArray={studentArray} setDataState={setDataState} dataState={dataState} />  
+      <StudentList cohort={cohort} handleTextChange={handleTextChange} pokemon={pokemon} setPokemon={setPokemon} findPokemon={findPokemon} studentArray={studentArray} setDataState={setDataState} dataState={dataState} />  
       </main>
     </div>
   );
